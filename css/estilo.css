@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700&display=swap');
+
+:root{
+  --fundo-corpo:#ECCCE7;
+  --nome:#9F47BE;
+  --profissao:#BF43EB;
+  --fundo-secoes: #D8B2DB;
+  --texto-secoes:#7C0C8E;
+  --fundo-tempo:#EE83E3;
+  --rodape1: #D8B2DB;
+  --rodape2: #C9A1B9;
+}
+
+*{
+    margin: 0; 
+    padding: 0;
+}
+
+html,
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--fundo-corpo);
+
+}
+
+.flex{
+    display: flex;
+}
+
+#texto-inicial{
+    flex-direction: row;
+    font-size: 2rem;
+}
+
+
+#foto-perfil{
+    align-items: center;
+    justify-content: center;
+}
+
+#nome{
+    color: var(--nome);
+    margin: 10px;
+    text-align: center;
+}
+
+#profissao{
+    text-align: center;
+    margin: 10px;
+    color: var(--profissao);
+}
+
+.info-pessoal{
+    text-align: center;
+    background-color: var(--fundo-secoes);
+    color: var(--texto-secoes);
+    margin: 6px;
+}
+
+.experiencia{
+    text-align: center;
+    background-color: var(--fundo-secoes);
+    color: var(--texto-secoes);
+    margin: 15px;
+
+
+}
+
+.tempo{
+    background-color: var(--fundo-tempo);
+    width: 42vw;
+    margin: 15px;
+
+}
+
+p{
+    padding: 5px;
+    margin-left: 2rem;
+}
+
+h3{
+    margin-left: 2rem;
+
+}
+
+footer{
+    flex-direction: column;
+    justify-content: center;
+}
+
+.endereco{
+    text-decoration: none;
+
+    background-color: var(--rodape1);
+}
+
+.telefone{
+    background-color: var(--rodape2);
+}
+
+.site{
+    background-color: var(--rodape1);
+}
+
+.email{
+    background-color: var(--rodape2);
+}
+
+.links a{
+    color: white;
+    padding-left: 1rem;
+    text-decoration: none;
+    align-self: center;
+}
+
+.links{
+    transition: all ease-in-out .2s;
+    
+}
+
+.links:hover{
+    transform: scale(1.010);
+}
+
+footer{
+    margin-left: 20px;
+    margin-right: 0px;
+}
+footer img{
+    height: 30px;
+    width: 40px;
+}
+
+@media screen and (min-width: 960px){
+    header{
+        align-items: flex-start;
+        display: grid;
+        grid-template: "container-titulo container-nome foto-perfil";
+        grid-template-columns: auto auto 30vw;
+        height: 180px; 
+    }
+
+    #foto-perfil{
+        background-attachment: fixed;
+        background-position: right top;
+        box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.2);
+        position: fixed;
+        right: 0;
+        width: 20vw;
+    }
+    #foto-perfil img{
+        min-width: 300px;
+    }
+
+    section{
+        width: 75vw;
+    }
+
+    footer{
+        bottom: 0;
+        box-shadow: 0px 20px 10px 10px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;    
+        height: 20vh;
+        position: fixed;   
+        right: 0; 
+        width: 21vw;
+    }
+
+   
+}
